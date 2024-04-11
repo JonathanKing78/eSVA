@@ -1,6 +1,9 @@
 # eSVA
 
 ## Steps to setting up server
+
+### Make sure Node is installed before you start ###
+
 **After you have completed forking and creating your own copy run these command inside the terminal with the path to the current working directory:**
 - First you install all the packages required that is in the package.json by running:
  ```console
