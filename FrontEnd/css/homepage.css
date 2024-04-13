@@ -1,0 +1,116 @@
+*{
+    font-family: "open sans";
+  }
+  .Navbar,
+  .top,
+  .side,
+  .bottom{
+    border: 1px solid rgb(161, 159, 159);
+  }
+  .Navbar{
+    /* background-color: rgb(184, 183, 183); */
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+    font-weight: bold;
+  
+  }
+  .nav-link{
+    color: black;
+    /* font-weight: bold; */
+    font-size: 1.2em;
+  }
+  .nav-link:hover{
+    color: rgb(0, 140, 255);
+  }
+  .arrow{
+    color: grey;
+    font-size:2.5em;
+    margin-top: 30px;
+    margin-right: 19px;
+    transition: ease-in-out .2s;
+  }
+  .arrow:hover{
+    color: rgb(152, 185, 228);
+  }
+  .user{
+    color: rgb(63, 62, 62);
+    transition: ease-in-out .2s;
+  }
+  .user:hover{
+    color: rgb(129, 129, 129);
+  }
+  body{
+    display: grid;
+    grid-template-columns: 33vw 62vw;
+    grid-template-rows: auto 25vh 25vh 29vh;
+                          gap: 10px;
+  }
+  .header{
+    grid-column-start: 1;
+    grid-column-end: -1 ;
+    /* grid-area: header; */
+    width: 100%;
+  }
+
+  .grid-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 250px;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+
+  .grid-item{
+    position: relative;
+    border: 2px solid rgb(0, 21, 112);
+    padding: 2px 235px 150px 35px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    transform: translateX(0);
+    border-radius: 100px 100px 100px 100px;
+    background-color: rgb(23, 136, 180);
+    
+  }
+
+
+  .g-a{
+    position: relative;
+    margin-left: 200px;
+    margin-bottom: 2px;
+    bottom: 30px;
+    
+  }
+
+  .g-al{
+    position: relative;
+    margin-left: 200px;
+    margin-bottom: 2px;
+    opacity: 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  .sidebar-content{
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    mix-blend-mode: color-burn ;
+  }
+  .h-1{
+    color:rgb(255, 255, 255) !important;
+  }
+
+  .img1{
+    mix-blend-mode: darken;
+    width: 200px;
+    /* margin-left: 0%; */
+  }
+
+  
