@@ -1,0 +1,307 @@
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial;
+  }
+  
+  /* Navbar */
+  .navbarContainer {
+    margin: 1.5em 0;
+  }
+  .navbarContainer .navbar {
+    background: #00d2ff;
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    padding: 0.6em 1em;
+    border-radius: 2em 0.3em 2em 0.3em;
+  }
+  .navbarContainer .navbar .navbar-brand {
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: cursive;
+  }
+  .navbarContainer .navbar .nav-link {
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500;
+    margin: 0 2em;
+    transition: 200ms all ease-in-out;
+  }
+  .navbarContainer .navbar .nav-link:hover {
+    opacity: 0.7;
+  }
+  .navbarContainer .navbar .nav-link i {
+    font-size: 2.2em;
+    vertical-align: middle;
+  }
+  .navbarContainer .navbar-nav {
+    align-items: center;
+  }
+  
+  /* Side Menu */
+  .sideMenu {
+    text-align: center;
+    background: #4b6cb7;
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+    background: linear-gradient(to right, #182848, #4b6cb7);
+    border-radius: 3em 0.3em 3em 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  .sideMenu .sideIcon {
+    height: 300px;
+  }
+  .sideMenu .sideHeading {
+    font-size: 3em;
+    color: white;
+    font-family: "Lobster";
+    text-shadow: 0 0 20px white;
+  }
+  
+  .contentSection {
+    padding-bottom: 1em;
+  }
+  /* First Container */
+  .firstContainer {
+    background: #24c6dc;
+    background: -webkit-linear-gradient(to right, #514a9d, #24c6dc);
+    background: linear-gradient(to right, #514a9d, #24c6dc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3em 3em 0.3em 3em;
+    min-height: 38vh;
+  }
+  .firstContainer .servicerCard {
+    background-color: white;
+    padding: 1em;
+    border-radius: 1.5em;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .firstContainer .servicerCard .cardHeading {
+    font-size: 2em;
+    color: black;
+    font-weight: 500;
+    line-height: 1;
+  }
+  
+  /* Second Container */
+  .secondContainer {
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    border-radius: 3em 0.3em 3em 0.3em;
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38vh;
+  }
+  .subHeading {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 600;
+  }
+  .mainText {
+    font-size: 1.1em;
+    color: white;
+    margin-top: 0.5em;
+    margin-left: 1em;
+  }
+  
+  /* Chart Div */
+  .contentSection .chartDiv {
+    text-align: center;
+  }
+  .contentSection .chartDiv img {
+    height: 120px;
+    margin: 1em 0;
+  }
+  .firstContainer.odd .servicerCard {
+    height: 120px;
+  }
+  .firstContainer.odd .servicerCard .cardHeading {
+    font-size: 1.2em;
+  }
+  
+  .multiButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8em;
+  }
+  .multiButtons.odd {
+    justify-content: flex-end;
+    margin-top: 0em;
+  }
+  .multiButtons a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    width: 100%;
+    max-width: 200px;
+    padding: 1em;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  /* Third Container */
+  .thirdContainer {
+    background: #24c6dc;
+    background: -webkit-linear-gradient(to right, #514a9d, #24c6dc);
+    background: linear-gradient(to right, #514a9d, #24c6dc);
+    padding: 19em;
+    border-radius: 2em;
+  }
+  .userCard img {
+    width: 100%;
+    margin-bottom: 1.5em;
+    border-radius: 0.8em;
+  }
+  .userCard .cardText {
+    color: white;
+    line-height: 1.5;
+    margin-left: 1em;
+  }
+  .userCard .cardBtn {
+    background-color: white;
+    color: black;
+    font-size: 0.9em;
+    border-radius: 15px;
+    padding: 0.4em 0.8em;
+    font-weight: 500;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0.8em;
+  }
+  
+  /* Media Query */
+  @media (max-width: 992px) {
+    .navbar-toggler {
+      background-color: white;
+    }
+    .sideMenu {
+      min-height: 40vh;
+      margin-bottom: 2em;
+    }
+    .firstContainer {
+      min-height: unset;
+      padding: 5em 1em;
+    }
+    .firstContainer.odd .servicerCard {
+      height: 150px;
+    }
+    .secondContainer {
+      min-height: unset;
+      padding: 5em 1em;
+    }
+    .userCard {
+      margin-bottom: 3em;
+    }
+    .multiButtons.odd {
+      justify-content: center;
+    }
+    .thirdContainer {
+      padding: 5em 1em;
+    }
+    .multiButtons a {
+      font-size: 0.9em;
+      width: 180px;
+    }
+  }
+  
+  /*Sign in */
+  
+  .formContainer{
+    
+    margin-left: 300px;
+    margin-top: 100px;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .social-icon a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .fourthcontainer{
+    background-color: #fff;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      width: 1400px;
+      max-width: 100%;
+      min-height: 500px;
+  }
+  
+  .fourthcontainer button{
+    background-color: #2d77a8;
+    color: #fff;
+    font-size: 12px;
+    padding: px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .fourthcontainer a{
+      color: #333;
+      font-size: 13px;
+      text-decoration: none;
+      margin: 15px 0 10px;
+  }
+  
+  .fourthcontainer input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+  }
+  
+  .fourthcontainer h1{
+    color: #2d77a8;
+    font-size: 20px;
+    margin: 15px 0 10px;
+  }
+  
+  .signin{
+      left: 0;
+      width: 40%;
+      z-index: 2;
+  }
+  
+  .sign-up{
+    left: 0;
+    width: 50%;
+    
+    
+  }
+  
