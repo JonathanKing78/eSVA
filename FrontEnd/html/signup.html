@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src 'self' https://fonts.gstatic.com;" />
     <title>sign up</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -27,7 +27,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css"
     />
-    <link rel="stylesheet" href="/eSVA/FrontEnd/css/signup.css" />
+    <link rel="stylesheet" href="../css/index.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -74,14 +74,15 @@
         <div class="row">
                 <div class="fourthcontainer" id="signupcontainer">
                   <div class="formContainer sign-up">
-                      <form>
+                      <form id = "">
                           <h1>Create Account</h1>
-                          <span>or <button href="index.html">sign in</button> to existing account</span>
-                          <input type="text" placeholder="Name">
-                          <input type="email" placeholder="Email">
-                          <input type="password" placeholder="Password">
-                          <input type="password" placeholder="Confirm Password">
+                          <span>or <a href="index.html">sign in</a> to existing account</span>
+                          <input id ="name" type="text" placeholder="Name">
+                          <input id = "email" type="email" placeholder="Email">
+                          <input id = "password" type="password" placeholder="Password">
+                          <input id = "cpassword" type="password" placeholder="Confirm Password">
                           <button>Sign Up</button>
+                          <span id="SignUpError">Test</span>
                       </form>
                   </div>
                 </div>
