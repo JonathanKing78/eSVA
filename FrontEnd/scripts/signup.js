@@ -19,7 +19,7 @@ const validate = (e)=>{
     // else check = true;
 
     if(check){
-        let formData = new FormData(form)
+        const formData = new FormData(form)
         // for (let pair of formData.entries()) {
         //     console.log(pair[0] + ', ' + pair[1]); 
         // }

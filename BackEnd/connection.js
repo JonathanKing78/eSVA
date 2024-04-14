@@ -20,4 +20,27 @@ insertUser = async (form) => {
     }
 }
 
-module.exports = {insertUser}
+
+checkUser = async (form) =>{
+    await client.connect()
+    const database = client.db(dbname);
+    const collection = database.collection(collectionName)
+    let found
+    // console.log(form.email, form.password);
+    try{
+     found = await collection.findOne({email : form.email , password: form.password})
+     delete found.password
+     delete found.cpassword
+    //  console.log("found", found);
+
+    }catch(error){
+        console.error("error");
+    }finally{
+        await client.close()
+    }
+
+    return found;
+
+}
+
+module.exports = {insertUser, checkUser}

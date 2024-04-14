@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/css', express.static(css, { 'extensions': ['css'] }));
 app.use('/scripts',express.static(scripts, {'extensions': ['js']}));
-app.use(express.static(imgs, {'extensions' : ['jpg', 'jpeg', 'png', 'webp', 'svg', 'avif']} ));
+app.use('/imgs', express.static(imgs, {'extensions' : ['jpg', 'jpeg', 'png', 'webp', 'svg', 'avif']} ));
 
 
 const indexPath ='../FrontEnd/html/index.html';
@@ -23,6 +23,7 @@ const eBenefitsMainPath ="../FrontEnd/html/eBenefits.html";
 const eRebatesPath = "../FrontEnd/html/eRebates.html";
 const instructionPath = "../FrontEnd/html/instructions.html"
 const signupPath = "../FrontEnd/html/signup.html";
+const homepagePath = "../FrontEnd/html/homepage.html"
 
 
 app.get('/', async (req,res)=>{
@@ -30,6 +31,10 @@ app.get('/', async (req,res)=>{
     res.sendFile(path.resolve(indexPath));
 
 });
+
+app.get('/homepage.html', async (req, res)=>{
+    res.sendFile(path.resolve(homepagePath));
+})
 
 app.get('/index.html', async (req,res)=>{
     res.sendFile(path.resolve(indexPath));
@@ -43,9 +48,11 @@ app.post('/signup', async (req, res) =>{
     await connection.insertUser(req.body);
     res.json({'redirect': '/index.html'});
     console.log(req.body);
-}
-)
+})
 
+app.post('/index', async (req,res) =>{
+    res.json({'suser': await connection.checkUser(req.body)})
+})
 app.get('/eServicer.html', async (req,res)=>{
     res.sendFile(path.resolve(eServicerMainPath));
 });
