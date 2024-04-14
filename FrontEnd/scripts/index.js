@@ -23,7 +23,10 @@ form.addEventListener('submit', function(e) {
                         
 					}
                     if(data.suser == null){
-                        document.getElementById("sign-in-error").innerText = "Incorrect credentials";
+                        document.getElementById("sign-in-error").innerText = "Incorrect credentials, Please try again";
+                        setTimeout(function() {
+                            document.getElementById("sign-in-error").innerText = "";
+                          }, 2000);
                     }
 				})
 })
