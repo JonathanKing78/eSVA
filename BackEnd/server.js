@@ -10,6 +10,8 @@ const scripts = path.resolve("../FrontEnd/scripts")
 const imgs = path.resolve("../FrontEnd/imgs")
 const html = path.resolve("../FrontEnd/html")
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use('/css', express.static(css, { 'extensions': ['css'] }));
 app.use('/scripts',express.static(scripts, {'extensions': ['js']}));
 app.use(express.static(imgs, {'extensions' : ['jpg', 'jpeg', 'png', 'webp', 'svg', 'avif']} ));
@@ -36,6 +38,13 @@ app.get('/index.html', async (req,res)=>{
 app.get('/signup.html', async (req,res)=>{
     res.sendFile(path.resolve(signupPath));
 });
+
+app.post('/signup', async (req, res) =>{
+    await connection.insertUser(req.body);
+    res.json({'redirect': '/index.html'});
+    console.log(req.body);
+}
+)
 
 app.get('/eServicer.html', async (req,res)=>{
     res.sendFile(path.resolve(eServicerMainPath));

@@ -4,28 +4,13 @@ const client = new MongoClient(uri);
 const dbname = "eSVA"
 const collectionName = "userInfo" 
 
-insertUserTest = async () => {
+insertUser = async (form) => {
     await client.connect();
         const database = client.db(dbname);
-        const collection = database.collection(collectionName)
-
-        const testUsers = [
-            {
-                "Name": "Jonathan King",
-                "Email": "jonathanking@email.com",
-                "password": "4asd5a4sdad4"
-
-            },
-            {
-                "Name": "John Brown",
-                "Email": "johnbrown@email.com",
-                "password": "4asddada45sda54dasd54a"
-
-            }
-        ]
+        const collection = database.collection(collectionName)       
     try{
-        const insertUsers = await collection.insertMany(testUsers);
-        console.log('users inserted');
+        const insertUsers = await collection.insertOne(form);
+        console.log('user inserted');
     }
     catch(error){
         console.error('Error occurred', error);
@@ -35,4 +20,4 @@ insertUserTest = async () => {
     }
 }
 
-module.exports = {insertUserTest}
+module.exports = {insertUser}

@@ -294,3 +294,7 @@ html {
     
   }
   
+  
+  #SignUpError{
+    color:red;
+  }

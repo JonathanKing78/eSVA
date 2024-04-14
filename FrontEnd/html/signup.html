@@ -74,15 +74,15 @@
         <div class="row">
                 <div class="fourthcontainer" id="signupcontainer">
                   <div class="formContainer sign-up">
-                      <form id = "">
+                      <form id = "signup" action="/signup" method="post">
                           <h1>Create Account</h1>
                           <span>or <a href="index.html">sign in</a> to existing account</span>
-                          <input id ="name" type="text" placeholder="Name">
-                          <input id = "email" type="email" placeholder="Email">
-                          <input id = "password" type="password" placeholder="Password">
-                          <input id = "cpassword" type="password" placeholder="Confirm Password">
-                          <button>Sign Up</button>
-                          <span id="SignUpError">Test</span>
+                          <input name ="name" type="text" placeholder="Name">
+                          <input name = "email" type="email" placeholder="Email">
+                          <input name = "password" type="password" placeholder="Password">
+                          <input name = "cpassword" type="password" placeholder="Confirm Password">
+                          <button type="submit">Sign Up</button>
+                          <span id="SignUpError"></span>
                       </form>
                   </div>
                 </div>
@@ -98,5 +98,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src="../scripts/signup.js"></script>
   </body>
 </html>
