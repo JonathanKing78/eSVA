@@ -39,11 +39,15 @@ const validate = (e)=>{
 						console.log("data in stored")
 					}
 				})
-				// .catch((error) => {
-				// 	console.log("Error")
-				// });	
+			
 		}
-        // console.log(form)
+        else{
+            document.getElementById("sign-in-error").innerText = "You have tried to sign up using an invalid field format, Please try again";
+            setTimeout(function() {
+                document.getElementById("sign-in-error").innerText = "";
+              }, 2000);
+        }
+    
     }
 
 const alpha = /^[a-zA-Z\s]+$/
