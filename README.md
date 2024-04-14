@@ -13,7 +13,7 @@ npm install nodemon
 ```
 - Then to start the server you navigate into the backend folder by using the cd command and then you type in the command:
 ```console
-nodemon server.js
+node server.js
 ```
 
 This is what you should see on your console:
