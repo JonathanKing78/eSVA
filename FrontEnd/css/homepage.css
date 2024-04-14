@@ -56,20 +56,18 @@
   .grid-container{
     position: relative;
     display: grid;
-    grid-template-columns: auto auto;
-    margin-left: 250px;
-    transform: translateX(0);
+    grid-template-columns: 100% 100%;
+    margin-left: 5%;
     transition: all 0.6s ease-in-out;
   }
 
   .grid-item{
     position: relative;
     border: 2px solid rgb(0, 21, 112);
-    padding: 2px 235px 150px 35px;
-    margin-left: 50px;
-    margin-bottom: 20px;
+    padding: 0% 95% 0% 0%;
+    margin-left: 50%;
+    margin-bottom: 20%;
     text-align: center;
-    transform: translateX(0);
     border-radius: 100px 100px 100px 100px;
     background-color: rgb(23, 136, 180);
     
