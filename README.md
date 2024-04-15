@@ -26,5 +26,10 @@ This is what you should see on your console:
 Server Running on 8000"
 ```
 
-- To load the webpage go into your browser and type in localhost:8000
-Currently you will see hello world and then a link to the eServicer page, when you click on the link it will load the eServicer page
+- To load the webpage go into your browser and type in localhost:8000. When the page loads it will direct you to the sign in page. To register a new user click the word "registrer", on that page you will be able to register a new user they are rules you have to follow for each field. Please see instructions below:
+    - Name: Must me alphacharacters less than or equal 14 characters long
+    - Email: Must follow standard email format
+    - Password: A combination of uppercase letters, lowercase letters, numbers, and symbols. Must be a minimum of 8 characters
+    - Confirm Password: Must match the password
+
+
