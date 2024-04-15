@@ -5,7 +5,10 @@ const form = document.querySelector("#signup");
 const validate = (e)=>{
     e.preventDefault();
     const form = e.currentTarget
-    const check = (checkName(form.name.value) && checkPass(form.password.value) && (form.password.value == form.cpassword.value))
+    const check = (checkName(form.name.value) && checkPass(form.password.value) && (form.password.value == form.cpassword.value));
+    console.log("Name",checkName(form.name.value));
+    console.log("Pass",checkPass(form.password.value));
+    console.log("Confirm",(form.password.value == form.cpassword.value));
     // if (!checkName(form.name)){
     //     check;
     // }

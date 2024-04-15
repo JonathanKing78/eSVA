@@ -24,12 +24,17 @@ const eRebatesPath = "../FrontEnd/html/eRebates.html";
 const instructionPath = "../FrontEnd/html/instructions.html"
 const signupPath = "../FrontEnd/html/signup.html";
 const homepagePath = "../FrontEnd/html/homepage.html"
+const eChargerPath ="../FrontEnd/html/echarger.html"
 
 
 app.get('/', async (req,res)=>{
     // await connection.insertUserTest();
     res.sendFile(path.resolve(indexPath));
 
+});
+
+app.get('/echarger.html', async (req,res)=>{
+    res.sendFile(path.resolve(eChargerPath));
 });
 
 app.get('/homepage.html', async (req, res)=>{
@@ -51,6 +56,7 @@ app.post('/signup', async (req, res) =>{
 })
 
 app.post('/index', async (req,res) =>{
+    console.log(req.body);
     res.json({'suser': await connection.checkUser(req.body)})
 })
 app.get('/eServicer.html', async (req,res)=>{

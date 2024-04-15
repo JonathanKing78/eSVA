@@ -29,8 +29,8 @@ checkUser = async (form) =>{
     // console.log(form.email, form.password);
     try{
      found = await collection.findOne({email : form.email , password: form.password})
-     delete found.password
-     delete found.cpassword
+    //  delete found.password
+    //  delete found.cpassword
     //  console.log("found", found);
 
     }catch(error){
